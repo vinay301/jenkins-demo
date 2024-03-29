@@ -6,7 +6,7 @@ pipeline {
     }
      environment {
       SCANNER_HOME = tool 'sonar-scanner'
-      scannerHome = tool 'SonarScanner for MSBuild'
+     
     }
     stages {
         stage('Git Checkout') {
@@ -26,7 +26,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps{    
                 withSonarQubeEnv(installationName: 'sonar') {
-                 bat '''$SCANNER_HOME/bin/sonar-scanner \
+                 bat '''${SCANNER_HOME}/bin/sonar-scanner \
                      -Dsonar.projectKey=DotnetCoreAutomatedPipeline \
                      -Dsonar.projectName=DotnetCoreAutomatedPipeline '''
                 }
