@@ -24,7 +24,7 @@ pipeline {
     stage('SonarQube Analysis') {
       steps {
         withSonarQubeEnv(installationName: 'sonar') {
-          bat """${sonarScanner}/bin/sonar-scanner \
+          sh """${sonarScanner}/bin/sonar-scanner \
             -Dsonar.projectKey=DotnetCoreAutomatedPipeline \
             -Dsonar.projectName=DotnetCoreAutomatedPipeline"""
         }
