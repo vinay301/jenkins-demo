@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZpXWV4cyxA/3zfOhVeGHi0+S6yu3fGo3hwE3lAVtdlpZ4GkFy4/dvOkBVonLR9LWXb1lwFt0tsBKmnlJmru0tw==",
+  "dgSpecHash": "PIlAJB+CLjpK9v7+l3j5/JOrFVcv3tsGDVTcJQBpFQDp+mePgOepmqLd0xZKqzGgO2ZZmkoOW6cLY+f5jJkh6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\vinaysharma04\\OneDrive - Nagarro\\Desktop\\PersonalProjects\\Jenkins FirstPipline (Demo)\\JenkinsDemo\\JenkinsDemo\\JenkinsDemo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vinaysharma04\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512"
+  ],
   "logs": []
 }
