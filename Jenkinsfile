@@ -26,6 +26,20 @@ pipeline {
         git 'https://github.com/vinay301/jenkins-demo.git'  
       }
     }
+
+    stage('Dotnet Build') {
+            agent {
+                docker {
+                     image 'mcr.microsoft.com/dotnet/sdk:6.0'
+                     args '--user root' 
+                     reuseNode true
+                }
+            }
+            steps {
+                sh 'dotnet build "$WORKSPACE/JenkinsDemo.sln" --configuration Release'
+                sh 'echo "Into the Build Stage"'
+            }
+        }
     
     stage('OWASP Dependency Check') {
       steps {
