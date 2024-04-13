@@ -27,6 +27,12 @@ pipeline {
       }
     }
 
+    stage('Grant Docker Permissions') {
+      steps {
+        sh 'sudo chmod 666 /var/run/docker.sock'
+        }
+    }
+
     stage('Dotnet Build') {
             agent {
                 docker {
